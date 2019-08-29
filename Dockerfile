@@ -1,6 +1,6 @@
 FROM alpine:latest
 ENV PIP_NO_CACHE_DIR=off
-RUN apk add --update curl jq python3 && pip3 install -q awscli
+RUN apk add --no-cache curl jq python3 && pip3 install -q awscli
 
 RUN cd /usr/local/bin \
     && curl -k -sS -O https://storage.googleapis.com/kubernetes-release/release/v1.12.7/bin/linux/amd64/kubectl \
